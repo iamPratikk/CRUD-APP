@@ -20,7 +20,7 @@ function App() {
     }else{
       setTasks(getTask)
     }
-  },[])
+  },[getTask])
 
 
   const addTask = (task) => {

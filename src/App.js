@@ -14,8 +14,9 @@ function App() {
   const [showAddTask, setShowAddTask] = useState(false);
   // console.log(task)
   
-  const getTask= JSON.parse(localStorage.getItem('taskAdded'));
+
   useEffect(()=>{
+      const getTask= JSON.parse(localStorage.getItem('taskAdded'));
     if(getTask== null){
       setTasks([])
     }else{
@@ -80,10 +81,10 @@ function App() {
           // text: text,
           // date: day,
           // id: uuidv4(),
-          data.id !==id
+          data.id !== id
         );
       }
-      return data.id !==id;
+      return data.id !== id;
     });
     setTasks(newData);
     setShowAddTask(true);

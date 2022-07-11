@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Swal from "sweetalert2";
 
+
 function App() {
   const [text, setText] = useState("");
   const [date, setDate] = useState("");
@@ -16,17 +17,19 @@ function App() {
   const getTask= JSON.parse(localStorage.getItem('taskAdded'));
   useEffect(()=>{
     if(getTask== null){
-      setTasks([]);
+      setTasks([])
     }else{
-      setTasks(getTask)
+      setTasks(getTask);
     }
   },[getTask])
 
 
   const addTask = (task) => {
     const id = uuidv4();
+    // console.log(task);
     const newTask = { id, ...task };
     setTasks([...tasks, newTask]);
+    // console.log(tasks);
     Swal.fire({
       icon: "success",
       title: "Yay...",
@@ -49,7 +52,7 @@ function App() {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
-      console.log(result)
+      // console.log(result)
       if (result.isConfirmed) {
         Swal.fire({
           timer: 1500,
@@ -83,7 +86,7 @@ function App() {
       return data.id !==id;
     });
     setTasks(newData);
-    showAddTask(true);
+    setShowAddTask(true);
   }
   // setTasks(newData)
   // Swal.fire({
@@ -98,6 +101,7 @@ function App() {
 
   return (
     <>
+    {/* <Practice /> */}
       {
         <div className="container">
           <Header

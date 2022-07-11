@@ -88,7 +88,7 @@ code {
 }
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-image: url("../public/very\ cool\ bg.jpeg");
+  background-image: url("../public/blue\ bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -115,7 +115,7 @@ body {
   min-height: 300px;
   padding: 30px;
   border-radius: 5px;
-  background-color: #ccc;
+  background-color: rgb(37, 166, 164);
 }
 .btn {
   display: inline-block;
@@ -139,7 +139,7 @@ body {
   width: 100%;
 }
 .task {
-  background: #f4f4f4;
+  background: #63c694;
   margin: 5px auto;
   max-width: 100%;
   padding: 10px 20px;

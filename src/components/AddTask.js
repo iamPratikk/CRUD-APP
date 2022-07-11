@@ -43,7 +43,7 @@ function AddTask({onSave, text, setText, date, setDate}) {
         />
       </div>
       <div className="form-control">
-        <label>Day & Time</label>
+        <label>Date & Time</label>
         <input
           type="datetime-local"
           value={date}
@@ -51,7 +51,7 @@ function AddTask({onSave, text, setText, date, setDate}) {
           onChange={(e) => setDate(e.target.value)}
         />
       </div>
-      <input type="submit" className="btn btn-block" value="save task" />
+      <input type="submit" className="btn btn-block" value="Save" />
     </form>
   );
 }

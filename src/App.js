@@ -14,8 +14,9 @@ function App() {
   const [showAddTask, setShowAddTask] = useState(false);
   // console.log(task)
   
-  const getTask= JSON.parse(localStorage.getItem('taskAdded'));
+
   useEffect(()=>{
+      const getTask= JSON.parse(localStorage.getItem('taskAdded'));
     if(getTask== null){
       setTasks([])
     }else{

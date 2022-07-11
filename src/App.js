@@ -81,10 +81,10 @@ function App() {
           // text: text,
           // date: day,
           // id: uuidv4(),
-          data.id !=id
+          data.id !== id
         );
       }
-      return data.id !=id;
+      return data.id !== id;
     });
     setTasks(newData);
     setShowAddTask(true);
